@@ -1,8 +1,10 @@
 name: Installing Python
-'on':
-  - push
+
+on: [push]
+
 jobs:
   build:
+<<<<<<< HEAD
     runs-on: '${{ matrix.os }}'
     strategy:
       matrix:
@@ -12,8 +14,12 @@ jobs:
         py-version:
           - "3.10"
           - "3.11"
+=======
+    runs-on: ubuntu-latest
+>>>>>>> parent of ca33f4c (updated cde)
     steps:
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '${{ matrix.py-version }}'
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: 3.10
+        
